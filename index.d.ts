@@ -17,6 +17,7 @@ declare module "react-native-image-picker" {
         latitude?: number;
         longitude?: number;
         timestamp?: string;
+        localIdentifier?: string;
     }
 
     interface CustomButtonOptions {
@@ -58,5 +59,4 @@ declare module "react-native-image-picker" {
     }
 
     export = ImagePicker;
-
 }
