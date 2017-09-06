@@ -413,6 +413,7 @@ RCT_EXPORT_METHOD(showImagePicker:(NSDictionary *)options callback:(RCTResponseS
                                 if (capturedAsset.creationDate) {
                                     self.response[@"timestamp"] = [[ImagePickerManager ISO8601DateFormatter] stringFromDate:capturedAsset.creationDate];
                                 }
+								self.response[@"localIdentifier"] = capturedAsset.localIdentifier;
                             }
                             self.callback(@[self.response]);
                         }
@@ -481,6 +482,7 @@ RCT_EXPORT_METHOD(showImagePicker:(NSDictionary *)options callback:(RCTResponseS
                                 if (capturedAsset.creationDate) {
                                     self.response[@"timestamp"] = [[ImagePickerManager ISO8601DateFormatter] stringFromDate:capturedAsset.creationDate];
                                 }
+								self.response[@"localIdentifier"] = capturedAsset.localIdentifier;
                             }
 
                             self.callback(@[self.response]);
